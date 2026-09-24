@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Portfolio Muhammad Husni Yusuf — Mechanical Engineering, Material Testing, Manufacturing, Quality, Metrology & Maintenance.">
+<title>Muhammad Husni Yusuf | Mechanical Engineering Portfolio</title>
+<style>
+:root{
+  --bg:#071014;
+  --bg2:#0b171c;
+  --panel:#0e1d23;
+  --panel2:#11252d;
+  --line:#28404a;
+  --text:#edf5f7;
+  --muted:#9eb0b7;
+  --accent:#54e0c0;
+  --accent2:#62a8ff;
+  --warn:#f2c66d;
+  --shadow:0 24px 70px rgba(0,0,0,.35);
+  --radius:22px;
+  --max:1180px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  background:
+    radial-gradient(circle at 80% 5%,rgba(84,224,192,.09),transparent 27%),
+    radial-gradient(circle at 10% 35%,rgba(98,168,255,.07),transparent 25%),
+    var(--bg);
+  color:var(--text);line-height:1.65;
+}
+body:before{
+  content:"";position:fixed;inset:0;pointer-events:none;opacity:.035;
+  background-image:linear-gradient(rgba(255,255,255,.5) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.5) 1px,transparent 1px);
+  background-size:42px 42px;mask-image:linear-gradient(to bottom,black,transparent 80%);
+}
+a{color:inherit;text-decoration:none}
+.container{width:min(var(--max),calc(100% - 40px));margin:auto}
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:50;
+  background:rgba(7,16,20,.72);backdrop-filter:blur(16px);
+  border-bottom:1px solid rgba(255,255,255,.06);
+}
+.nav-inner{height:72px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-weight:900;letter-spacing:-.04em;font-size:1.1rem}
+.logo span{color:var(--accent)}
+.nav-links{display:flex;gap:26px;color:var(--muted);font-size:.9rem}
+.nav-links a:hover{color:var(--accent)}
+.menu{display:none;background:none;border:1px solid var(--line);color:var(--text);padding:8px 11px;border-radius:10px}
+.hero{min-height:100vh;display:grid;align-items:center;padding:130px 0 80px;position:relative;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.18fr .82fr;gap:70px;align-items:center}
+.kicker{color:var(--accent);font:700 .78rem/1.2 ui-monospace,SFMono-Regular,monospace;letter-spacing:.16em;text-transform:uppercase;margin-bottom:22px}
+h1{font-size:clamp(3.1rem,7vw,6.7rem);line-height:.93;letter-spacing:-.065em;max-width:900px}
+h1 em{font-style:normal;color:var(--accent)}
+.hero-copy{max-width:680px;color:var(--muted);font-size:1.05rem;margin:28px 0}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:9px;padding:12px 17px;border-radius:12px;border:1px solid var(--line);font-weight:750;font-size:.9rem;transition:.2s}
+.btn.primary{background:var(--accent);color:#06221c;border-color:var(--accent)}
+.btn:hover{transform:translateY(-2px);border-color:var(--accent)}
+.engineering-card{
+  position:relative;min-height:480px;border:1px solid var(--line);border-radius:30px;
+  background:linear-gradient(145deg,rgba(17,37,45,.95),rgba(8,18,22,.96));
+  box-shadow:var(--shadow);overflow:hidden;padding:30px;
+}
+.engineering-card:before{
+  content:"";position:absolute;width:310px;height:310px;border:1px solid rgba(84,224,192,.3);
+  border-radius:50%;top:45px;left:50%;transform:translateX(-50%);
+  box-shadow:0 0 0 42px rgba(84,224,192,.025),0 0 0 84px rgba(84,224,192,.018);
+}
+.pipe{position:absolute;left:50%;top:95px;transform:translateX(-50%);width:112px;height:310px;border:2px solid var(--accent);border-radius:58px;background:linear-gradient(90deg,rgba(84,224,192,.02),rgba(84,224,192,.16),rgba(84,224,192,.02));}
+.pipe:after{content:"";position:absolute;left:26px;right:26px;top:15px;bottom:15px;border:1px dashed rgba(84,224,192,.5);border-radius:45px}
+.measure{position:absolute;color:var(--muted);font:700 .68rem ui-monospace,monospace;letter-spacing:.08em}
+.measure.top{top:65px;left:30px}.measure.side{right:28px;top:235px;writing-mode:vertical-rl}
+.card-label{position:absolute;bottom:28px;left:30px;right:30px;display:flex;justify-content:space-between;border-top:1px solid var(--line);padding-top:17px;font:700 .72rem ui-monospace,monospace;color:var(--muted)}
+section{padding:105px 0}
+.section-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:42px}
+.section-num{color:var(--accent);font:700 .75rem ui-monospace,monospace}
+h2{font-size:clamp(2rem,4vw,3.5rem);letter-spacing:-.05em;line-height:1.05;margin-top:8px}
+.section-desc{max-width:470px;color:var(--muted)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.panel{border:1px solid var(--line);background:rgba(14,29,35,.7);border-radius:var(--radius);padding:28px}
+.panel h3{font-size:1.1rem;margin-bottom:13px}
+.panel p{color:var(--muted)}
+.focus{display:flex;flex-wrap:wrap;gap:9px;margin-top:22px}
+.tag{border:1px solid var(--line);padding:8px 11px;border-radius:999px;color:#cfe0e5;font-size:.78rem;background:rgba(255,255,255,.02)}
+.timeline{position:relative;margin-left:12px}
+.timeline:before{content:"";position:absolute;left:5px;top:0;bottom:0;width:1px;background:var(--line)}
+.item{position:relative;padding:0 0 42px 45px}
+.dot{position:absolute;left:-1px;top:5px;width:13px;height:13px;border:3px solid var(--bg);background:var(--accent);border-radius:50%;box-shadow:0 0 0 1px var(--accent)}
+.meta{font:700 .72rem ui-monospace,monospace;color:var(--accent);letter-spacing:.04em;margin-bottom:7px}
+.item h3{font-size:1.3rem;line-height:1.25}
+.org{color:#c8d6da;font-size:.92rem;margin:5px 0 12px}
+.item ul{padding-left:19px;color:var(--muted)}
+.item li{margin:5px 0}
+.project{
+  display:grid;grid-template-columns:.7fr 1.3fr;gap:0;overflow:hidden;border:1px solid var(--line);border-radius:28px;background:var(--panel);box-shadow:var(--shadow)
+}
+.project-visual{min-height:410px;background:
+  linear-gradient(135deg,rgba(84,224,192,.12),transparent 50%),
+  repeating-linear-gradient(0deg,transparent 0 35px,rgba(255,255,255,.035) 36px),
+  repeating-linear-gradient(90deg,transparent 0 35px,rgba(255,255,255,.035) 36px);
+  display:flex;align-items:center;justify-content:center;position:relative
+}
+.project-visual .ring{width:220px;height:220px;border-radius:50%;border:1px solid var(--accent);box-shadow:0 0 0 22px rgba(84,224,192,.035),0 0 0 45px rgba(84,224,192,.025);display:flex;align-items:center;justify-content:center}
+.ring span{font:800 2.5rem ui-monospace,monospace;color:var(--accent)}
+.project-body{padding:40px}
+.project-body .label{font:700 .72rem ui-monospace,monospace;color:var(--accent);letter-spacing:.12em}
+.project-body h3{font-size:2rem;letter-spacing:-.04em;margin:10px 0 14px}
+.project-body p{color:var(--muted)}
+.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:28px 0}
+.metric{padding:16px;border:1px solid var(--line);border-radius:15px;background:rgba(255,255,255,.025)}
+.metric strong{display:block;font-size:1.3rem;color:var(--text)}
+.metric small{color:var(--muted)}
+.skills-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.skill-group h3{margin-bottom:14px}
+.skill-list{display:flex;flex-wrap:wrap;gap:9px}
+.skill{padding:10px 12px;border:1px solid var(--line);border-radius:11px;background:var(--panel);font-size:.83rem}
+.education{display:grid;grid-template-columns:1fr auto;gap:30px;align-items:start}
+.edu-degree{font-size:1.5rem;font-weight:800}
+.edu-meta{color:var(--muted);margin-top:5px}
+.scholarships{margin-top:20px;display:grid;gap:9px}
+.scholarship{border-left:2px solid var(--accent);padding-left:13px;color:var(--muted)}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.contact-card{border:1px solid var(--line);background:var(--panel);padding:26px;border-radius:20px}
+.contact-card span{display:block;color:var(--muted);font:700 .7rem ui-monospace,monospace;text-transform:uppercase;letter-spacing:.12em;margin-bottom:5px}
+.contact-card a:hover{color:var(--accent)}
+footer{padding:35px 0;border-top:1px solid var(--line);color:var(--muted);font-size:.82rem}
+.footer-inner{display:flex;justify-content:space-between;gap:20px}
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;transform:none}
+@media(max-width:850px){
+  .nav-links{display:none}.menu{display:block}
+  .hero-grid,.about-grid,.project,.skills-grid,.contact{grid-template-columns:1fr}
+  .hero{padding-top:110px}.engineering-card{min-height:390px}
+  .section-head{display:block}.section-desc{margin-top:15px}
+  .project-visual{min-height:280px}.metrics{grid-template-columns:1fr}
+  .education{grid-template-columns:1fr}
+}
+@media(max-width:520px){
+  .container{width:min(var(--max),calc(100% - 26px))}
+  section{padding:75px 0}h1{font-size:3.2rem}
+  .hero-actions{display:grid}.btn{justify-content:center}
+  .footer-inner{display:block}.footer-inner div+div{margin-top:8px}
+}
+</style>
+</head>
+<body>
+<nav>
+  <div class="container nav-inner">
+    <a href="#home" class="logo">YUSUF<span>.</span></a>
+    <div class="nav-links">
+      <a href="#about">About</a><a href="#experience">Experience</a><a href="#project">Project</a><a href="#skills">Skills</a><a href="#contact">Contact</a>
+    </div>
+    <button class="menu" onclick="document.querySelector('.nav-links').style.display=document.querySelector('.nav-links').style.display==='flex'?'none':'flex'">MENU</button>
+  </div>
+</nav>
+
+<main>
+<section class="hero" id="home">
+  <div class="container hero-grid">
+    <div class="reveal">
+      <div class="kicker">Mechanical Engineering · Yogyakarta</div>
+      <h1>Muhammad<br>Husni <em>Yusuf</em></h1>
+      <p class="hero-copy">Lulusan Teknik Mesin Universitas Islam Indonesia dengan pengalaman pada <b>material testing, metrology, laboratory engineering, manufacturing, quality</b>, dan <b>mechanical maintenance</b>.</p>
+      <div class="hero-actions">
+        <a class="btn primary" href="#project">Explore Portfolio →</a>
+        <a class="btn" href="#contact">Contact Me</a>
+        <a class="btn" href="https://linkedin.com/in/muhammadhusniyusuf" target="_blank" rel="noopener">LinkedIn ↗</a>
+      </div>
+    </div>
+    <div class="engineering-card reveal">
+      <span class="measure top">Ø 33 mm / COMPOSITE</span>
+      <span class="measure side">MATERIAL TESTING</span>
+      <div class="pipe"></div>
+      <div class="card-label"><span>MECHANICAL ENGINEERING</span><span>01 — 06</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+<div class="container">
+  <div class="section-head reveal"><div><div class="section-num">01 / PROFILE</div><h2>Engineering mindset,<br>built from practice.</h2></div><p class="section-desc">Berorientasi pada pekerjaan teknis berbasis data, pengujian, pengukuran, pemecahan masalah, dan penerapan prosedur di lingkungan laboratorium maupun industri.</p></div>
+  <div class="about-grid">
+    <div class="panel reveal"><h3>Professional Profile</h3><p>Memiliki pengalaman sebagai asisten praktikum pada pengujian material, fenomena mekanika, dan metrologi industri, serta kerja praktik pada Mechanical Maintenance Workshop di industri semen. Memiliki pengalaman koordinasi melalui organisasi mahasiswa dan KKN tingkat desa.</p></div>
+    <div class="panel reveal"><h3>Professional Interests</h3><p>Area yang diminati untuk pengembangan karier dan kontribusi profesional:</p><div class="focus"><span class="tag">Mechanical Engineering</span><span class="tag">Manufacturing</span><span class="tag">Material Testing</span><span class="tag">Quality</span><span class="tag">Metrology</span><span class="tag">Maintenance</span></div></div>
+  </div>
+</div>
+</section>
+
+<section id="experience">
+<div class="container">
+  <div class="section-head reveal"><div><div class="section-num">02 / EXPERIENCE</div><h2>Hands-on<br>experience.</h2></div><p class="section-desc">Pengalaman akademik, laboratorium, industri, dan organisasi yang membentuk kemampuan teknis serta koordinasi.</p></div>
+  <div class="timeline">
+    <article class="item reveal"><span class="dot"></span><div class="meta">SEP 2025 — AUG 2026</div><h3>Final Project — Composite Material Testing</h3><div class="org">Universitas Islam Indonesia · Yogyakarta</div><ul><li>Menganalisis kekuatan tarik dan impak produk galah egrek komposit Gentere sebagai substitusi produk impor.</li><li>Melaksanakan pengujian tarik pada spesimen strip longitudinal dan pengujian impak Charpy termodifikasi pada pipa komposit utuh.</li><li>Mengolah kekuatan, energi impak, dan variasi hasil; membandingkan dua varian Gentere dengan produk pembanding.</li><li>Menyusun laporan teknis, analisis, pembahasan keterbatasan metode, dan kesimpulan berbasis data.</li></ul></article>
+    <article class="item reveal"><span class="dot"></span><div class="meta">MAR — APR 2025</div><h3>Mechanical Maintenance Intern</h3><div class="org">PT Solusi Bangun Indonesia Tbk · Cilacap</div><ul><li>Melaksanakan kerja praktik pada Mechanical Maintenance Workshop di industri semen.</li><li>Mengidentifikasi permasalahan abrasi pada Hub Roller Vertical Roller Mill dan mempelajari evaluasi serta proses perbaikannya.</li><li>Menganalisis kebutuhan perbaikan berdasarkan estimasi, kualitas, dan urgensi sebagai bagian dari kajian peningkatan keandalan komponen.</li><li>Mengikuti aktivitas sesuai prosedur operasional, keselamatan kerja, dan koordinasi lingkungan industri.</li></ul></article>
+    <article class="item reveal"><span class="dot"></span><div class="meta">MAR — JUL 2025</div><h3>Asisten Praktikum Pengujian Material</h3><div class="org">Universitas Islam Indonesia · Yogyakarta</div><ul><li>Membimbing tujuh modul: tarik, tekan/lentur, impak, laju korosi, kekerasan, preparasi spesimen metalografi, dan metalografi.</li><li>Mendampingi pengujian, penggunaan peralatan laboratorium, pengamatan hasil, dan pembahasan studi kasus.</li><li>Membantu interpretasi hasil serta evaluasi laporan praktikum dan memberikan umpan balik teknis.</li></ul></article>
+    <article class="item reveal"><span class="dot"></span><div class="meta">SEP 2024 — JAN 2025 · SEP 2024 — DEC 2024</div><h3>Asisten Praktikum Fenomena Mekanika & Metrologi Industri</h3><div class="org">Universitas Islam Indonesia · Yogyakarta</div><ul><li>Fenomena Mekanika: membimbing sembilan modul, termasuk pompa sentrifugal, lendutan batang, viskositas, water hammer, perpindahan kalor, dan shaft misalignment.</li><li>Metrologi Industri: membimbing pengukuran linear, sudut, ketegaklurusan, kebulatan, kedataran, kelurusan, dan dimensi produk.</li><li>Menggunakan dan mendampingi penggunaan Vernier Caliper, Micrometer, Bevel Protractor, Dial Indicator, dan Height Master.</li></ul></article>
+    <article class="item reveal"><span class="dot"></span><div class="meta">MAR — JUL 2024</div><h3>Asisten Praktikum Pengujian Material</h3><div class="org">Universitas Islam Indonesia · Yogyakarta</div><ul><li>Membimbing tujuh modul pengujian material serta mendampingi penggunaan peralatan laboratorium dan interpretasi hasil.</li></ul></article>
+  </div>
+</div>
+</section>
+
+<section id="project">
+<div class="container">
+  <div class="section-head reveal"><div><div class="section-num">03 / FEATURED PROJECT</div><h2>Composite material<br>testing.</h2></div><p class="section-desc">Tugas akhir yang menggabungkan experimental testing, data processing, comparative analysis, dan technical reporting.</p></div>
+  <div class="project reveal">
+    <div class="project-visual"><div class="ring"><span>GENTERE</span></div></div>
+    <div class="project-body">
+      <div class="label">FINAL PROJECT · 2025—2026</div>
+      <h3>Analisis Kekuatan Tarik dan Impak Produk Gentere sebagai Substitusi Produk Impor</h3>
+      <p>Studi eksperimental terhadap dua varian galah egrek komposit Gentere dengan pengujian tarik pada strip longitudinal dan pengujian impak Charpy termodifikasi pada pipa komposit utuh.</p>
+      <div class="metrics">
+        <div class="metric"><strong>451.73 MPa</strong><small>UTS Gentere CF</small></div>
+        <div class="metric"><strong>195 J</strong><small>Impact energy CF</small></div>
+        <div class="metric"><strong>2 mm/min</strong><small>Tensile speed</small></div>
+      </div>
+      <p><b>Scope:</b> specimen preparation · tensile testing · modified Charpy impact · dimensional measurement · statistical variation · comparative analysis · technical documentation.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<section id="organization">
+<div class="container">
+  <div class="section-head reveal"><div><div class="section-num">04 / LEADERSHIP</div><h2>Coordination beyond<br>the laboratory.</h2></div><p class="section-desc">Pengalaman organisasi dan KKN yang melatih koordinasi lintas tim, komunikasi, perencanaan, serta eksekusi program.</p></div>
+  <div class="about-grid">
+    <div class="panel reveal"><div class="meta">AUG — SEP 2024</div><h3>Koordinator Desa — KKN UII 69</h3><p><b>Desa Jati, Bener, Purworejo</b> · Koordinasi 7 unit dan 55 mahasiswa.</p><br><p>Mengoordinasikan komunikasi dengan DPL, pemerintah desa, kepala dusun, RT/RW, tokoh masyarakat, serta enam program desa: Buku Profil Desa, Video Profil Desa, peta dan maket batas administrasi dusun, Behind The Scene KKN UII 69, pelatihan video editing, dan Pojok Baca.</p></div>
+    <div class="panel reveal"><div class="meta">2022 — 2025</div><h3>HMTM LEM FTI UII & RPM</h3><p><b>Staff Minat dan Bakat</b> · Berkontribusi pada program pengembangan minat, bakat, kreativitas, olahraga, pelatihan pengelasan, dan kompetisi desain merchandise.</p><br><p><b>Coordinator Jelajah Alam — RPM 2023</b> · Mengelola perencanaan teknis, pembagian tugas, rute, layout area, kebutuhan lapangan, anggaran, dan laporan pertanggungjawaban.</p><br><p><b>Senior Mentor & Event Support — RPM 2024 & 2025</b> · Transfer pengetahuan, arahan teknis, dan dukungan transisi kepemimpinan.</p></div>
+  </div>
+</div>
+</section>
+
+<section id="skills">
+<div class="container">
+  <div class="section-head reveal"><div><div class="section-num">05 / TOOLKIT</div><h2>Technical toolkit.</h2></div><p class="section-desc">Perangkat lunak dan kompetensi yang digunakan dalam kegiatan akademik, laboratorium, organisasi, dan proyek teknik.</p></div>
+  <div class="skills-grid">
+    <div class="panel skill-group reveal"><h3>Engineering & Software</h3><div class="skill-list"><span class="skill">Microsoft Word</span><span class="skill">Microsoft Excel</span><span class="skill">PowerPoint</span><span class="skill">SolidWorks</span><span class="skill">Fusion 360</span><span class="skill">AutoCAD</span><span class="skill">Ansys</span><span class="skill">Scilab</span><span class="skill">Arduino</span></div></div>
+    <div class="panel skill-group reveal"><h3>Professional Skills</h3><div class="skill-list"><span class="skill">Teamwork & Collaboration</span><span class="skill">Public Speaking</span><span class="skill">Creative Thinking</span><span class="skill">Analytical Problem Solving</span><span class="skill">Curiosity</span><span class="skill">Fast Learning</span></div></div>
+  </div>
+</div>
+</section>
+
+<section id="education">
+<div class="container">
+  <div class="section-head reveal"><div><div class="section-num">06 / EDUCATION</div><h2>Academic foundation.</h2></div></div>
+  <div class="panel education reveal">
+    <div><div class="meta">SEP 2021 — AUG 2026</div><div class="edu-degree">Bachelor of Mechanical Engineering</div><div class="edu-meta">Universitas Islam Indonesia · Yogyakarta, Indonesia</div><div class="scholarships"><div class="scholarship">Beasiswa Bantuan Belajar Pendidikan (B3P) FTI UII 2021/2022</div><div class="scholarship">Beasiswa Bantuan Belajar Pendidikan (B3P) FTI UII 2022/2023</div></div></div>
+    <div><div class="meta">ACADEMIC RESULT</div><div style="font-size:2.5rem;font-weight:900">3.00<span style="font-size:1rem;color:var(--muted)"> / 4.00</span></div></div>
+  </div>
+</div>
+</section>
+
+<section id="contact">
+<div class="container">
+  <div class="section-head reveal"><div><div class="section-num">07 / CONTACT</div><h2>Let's connect.</h2></div><p class="section-desc">Terbuka untuk peluang profesional, engineering projects, manufacturing, quality, material testing, metrology, dan maintenance.</p></div>
+  <div class="contact">
+    <div class="contact-card reveal"><span>Email</span><a href="mailto:yusufaldebaran7@gmail.com">yusufaldebaran7@gmail.com</a></div>
+    <div class="contact-card reveal"><span>Phone</span><a href="tel:+6281350965345">081350965345</a></div>
+    <div class="contact-card reveal"><span>LinkedIn</span><a href="https://linkedin.com/in/muhammadhusniyusuf" target="_blank" rel="noopener">linkedin.com/in/muhammadhusniyusuf ↗</a></div>
+    <div class="contact-card reveal"><span>Location</span><div>Gondokusuman, Yogyakarta, Indonesia</div></div>
+  </div>
+</div>
+</section>
+</main>
+
+<footer><div class="container footer-inner"><div>© 2026 Muhammad Husni Yusuf</div><div>Mechanical Engineering · Built with HTML / CSS / JS</div></div></footer>
+
+<script>
+const observer=new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')})
+},{threshold:.08});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+</script>
+</body>
+</html>
